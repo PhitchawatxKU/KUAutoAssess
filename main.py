@@ -24,6 +24,8 @@ class eassess:
 
     def __init__(self):
         self.req = requests.Session()
+        if True:
+            self.host = 'https://localhost'
     
     def login(self, username, password):
         post_data = {
