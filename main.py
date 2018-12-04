@@ -105,7 +105,7 @@ class eassess:
 
     def assess(self, subject ):
         if subject['assessed']:
-            return (False, 'has aready assessed')
+            return (False, 'was assessed')
         req = self.req.post(self.host+self.page_url['source']+subject['formurl'], data = {**{'submit': 'ประเมิน'},**subject['form']})
         doc = html.fromstring(req.text)
         choice_all = doc.find('.//input[@name="choice_all"]').attrib['value']
